@@ -1,0 +1,34 @@
+#N canvas -8 -8 1920 1037 12;
+#X obj 104 126 tgl 15 0 empty empty Start 17 7 1 10 -228856 -4034 -1
+1 1;
+#X obj 104 179 hradio 15 1 0 16 empty empty empty 0 -8 0 10 -232576
+-1 -1 15;
+#N canvas 0 50 450 250 (subpatch) 0;
+#X array \$0_Pitches 16 float 3;
+#A 0 55 74 79 74 82 74 79 74 84 74 78 74 81 74 78 74;
+#X coords 0 90 16 40 200 140 1 0 0;
+#X restore 364 154 graph;
+#X obj 100 101 cnv 15 468 20 empty empty MB_Sequencer12 10 10 0 14
+-233017 -66577 0;
+#X obj 52 71 array set \$0_Pitches;
+#X floatatom 5 128 5 0 0 0 - - -;
+#X obj 104 326 array get \$0_Pitches;
+#X obj 104 355 mtof;
+#X floatatom 305 207 5 0 0 0 - - -;
+#X obj 305 325 outlet;
+#X obj 550 104 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-261234 -1;
+#X msg 111 28 55 74 79 74 82 74 79 74 84 74 78 74 81 74 78 74;
+#X obj 17 155 counter16 ~;
+#X obj 5 57 inlet;
+#X connect 0 0 12 0;
+#X connect 1 0 6 0;
+#X connect 1 0 10 0;
+#X connect 5 0 12 1;
+#X connect 6 0 7 0;
+#X connect 7 0 8 0;
+#X connect 8 0 9 0;
+#X connect 11 0 4 0;
+#X connect 12 0 1 0;
+#X connect 13 0 5 0;
+#X coords 0 -1 1 1 470 200 2 100 100;
